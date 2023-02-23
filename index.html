@@ -13,31 +13,34 @@
 <body>
     <div id="container">
         <div id="game-title">Rock Paper Scissors </div>
-        <div id="game-guidance">Round 0 - Select your weapon:</div>
+        <div id="game-info">Round 1 - Select your weapon:</div>
         <div id="shape-container">
             <div>
-                <button id="rock">Rock</button>
+                <button class="shape" id="rock">Rock</button>
                 <div>Rock</div>
             </div>
             <div>
-                <button id="paper">Paper</button>
+                <button class="shape" id="paper">Paper</button>
                 <div>Paper</div>
             </div>
             <div>
-                <button id="scissors">Scissors</button>
+                <button class="shape" id="scissors">Scissors</button>
                 <div>Scissors</div>
             </div>
         </div>
+        <div id="round-info">&nbsp;</div>
         <div id="score-container">
             <div id="player-container">
                 <div>Player</div>
                 <div id="player-score">0</div>
-                <div id="player-logs">[Player logs]</div>
+                <ul id="player-logs">
+                </ul>
             </div>
             <div id="player-container">
                 <div>Computer</div>
-                <div id="player-score">0</div>
-                <div id="computer-logs">[Computer logs]</div>
+                <div id="computer-score">0</div>
+                <ul id="computer-logs">
+                </ul>
             </div>
 
         </div>

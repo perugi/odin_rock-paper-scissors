@@ -17,3 +17,7 @@
 #score-container {
     display: flex;
 }
+
+ul {
+    list-style-type: none;
+}
