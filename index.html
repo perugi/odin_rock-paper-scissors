@@ -16,37 +16,33 @@
         <div id="game-info">Round 1 - Select your weapon:</div>
         <div id="shape-container">
             <div>
-                <button class="shape" id="rock">Rock</button>
+                <img src="images/rock.png" width="250px" class="shape" id="rock" draggable="false">
                 <div>Rock</div>
             </div>
             <div>
-                <button class="shape" id="paper">Paper</button>
+                <img src="images/paper.png" width="250px" class="shape" id="paper" draggable="false">
                 <div>Paper</div>
             </div>
             <div>
-                <button class="shape" id="scissors">Scissors</button>
+                <img src="images/scissors.png" width="250px" class="shape" id="scissors" draggable="false">
                 <div>Scissors</div>
             </div>
         </div>
         <div id="round-info">&nbsp;</div>
         <div id="score-container">
-            <div id="player-container">
+            <div class="player-container">
                 <div>Player</div>
                 <div id="player-score">0</div>
-                <ul id="player-logs">
-                </ul>
+                <ul class="logs" id="player-logs"></ul>
             </div>
-            <div id="player-container">
+            <div class="player-container">
                 <div>Computer</div>
                 <div id="computer-score">0</div>
-                <ul id="computer-logs">
-                </ul>
+                <ul class="logs" id="computer-logs"></ul>
             </div>
 
         </div>
     </div>
-
-
 </body>
 
 </html>

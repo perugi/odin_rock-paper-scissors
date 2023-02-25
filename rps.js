@@ -7,6 +7,7 @@ shapeBtns.forEach(shapeBtn => shapeBtn.addEventListener('click', playRound));
 
 // Plays a single round of rock-paper-scissors.
 function playRound(e) {
+    console.log(e);
     playerSelection = e.target.id;
     computerSelection = getComputerChoice();
     const winner = getWinner(playerSelection, computerSelection);
@@ -93,6 +94,7 @@ function updateInfo(winner, playerSelection, computerSelection) {
     playerLog = document.querySelector("#player-logs");
     newPlayerLog = document.createElement("li");
     newPlayerLog.textContent = toTitleCase(playerSelection);
+    console.log(newPlayerLog)
     playerLog.appendChild(newPlayerLog);
 
     computerLog = document.querySelector("#computer-logs");
@@ -116,12 +118,12 @@ function endGame(winner) {
     roundInfo = document.querySelector("#round-info");
 
     gameInfo.textContent = "Game over! "
-    if (winner === "player") gameInfo.textContent += "You win!"
-    else gameInfo.textContent += "The computer wins!"
+    if (winner === "player") roundInfo.textContent = "You win!"
+    else roundInfo.textContent = "The computer wins!"
 
-    roundInfo.textContent = "Press spacebar to play another game."
+    roundInfo.textContent += " Press spacebar to play another game."
 
-    shapeBtns.forEach(btn => btn.disabled = true);
+    shapeBtns.forEach(shapeBtn => shapeBtn.removeEventListener('click', playRound));
     document.addEventListener("keydown", newGame);
 }
 
@@ -137,7 +139,7 @@ function newGame(e) {
     gameInfo.textContent = `Round 1 - Select your weapon:`;
     ;
 
-    shapeBtns.forEach(btn => btn.disabled = false);
+    shapeBtns.forEach(shapeBtn => shapeBtn.addEventListener('click', playRound));
 
     roundInfo = document.querySelector("#round-info");
     roundInfo.innerHTML = "&nbsp;"

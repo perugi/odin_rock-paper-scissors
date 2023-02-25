@@ -1,24 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+
 * {
-    box-sizing: content-box;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    border: 1px black solid;
+    font-family: 'Gloock', serif;
 }
 
 #container {
+    margin-top: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+#game-title {
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+#game-info,
+#round-info {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.shape {
+    border: 2px solid gray;
+    transition: 0.5s;
+    filter: grayscale(100%);
+
+}
+
+.shape:hover {
+    border: 5px solid black;
+    filter: grayscale(0%);
+}
+
 #shape-container {
     display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 850px) {
+    #shape-container {
+        flex-direction: column;
+    }
+}
+
+#shape-container>div>div {
+    font-size: 20px;
+    text-align: center;
 }
 
 #score-container {
+    margin-top: 30px;
+    align-self: stretch;
     display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
-ul {
+.player-container {
+    flex-basis: 120px;
+    font-size: 28px;
+}
+
+.logs {
+    margin-top: 10px;
+    font-size: 20px;
     list-style-type: none;
 }
+
+/* 
+ul {
+    list-style-type: none;
+} */
