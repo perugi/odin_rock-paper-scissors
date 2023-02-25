@@ -32,7 +32,7 @@
 
 }
 
-.shape:hover {
+.shape_h:hover {
     border: 5px solid black;
     filter: grayscale(0%);
 }

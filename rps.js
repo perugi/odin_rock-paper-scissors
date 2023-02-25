@@ -123,7 +123,11 @@ function endGame(winner) {
 
     roundInfo.textContent += " Press spacebar to play another game."
 
-    shapeBtns.forEach(shapeBtn => shapeBtn.removeEventListener('click', playRound));
+    shapeBtns.forEach(shapeBtn => {
+        shapeBtn.removeEventListener('click', playRound);
+        shapeBtn.classList.remove('shape_h');
+    });
+
     document.addEventListener("keydown", newGame);
 }
 
@@ -139,7 +143,10 @@ function newGame(e) {
     gameInfo.textContent = `Round 1 - Select your weapon:`;
     ;
 
-    shapeBtns.forEach(shapeBtn => shapeBtn.addEventListener('click', playRound));
+    shapeBtns.forEach(shapeBtn => {
+        shapeBtn.addEventListener('click', playRound);
+        shapeBtn.classList.add('shape_h');
+    });
 
     roundInfo = document.querySelector("#round-info");
     roundInfo.innerHTML = "&nbsp;"
