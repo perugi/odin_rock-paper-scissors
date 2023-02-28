@@ -7,6 +7,14 @@
     font-family: 'Gloock', serif;
 }
 
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
 #container {
     margin-top: 10vh;
     display: flex;
@@ -67,13 +75,32 @@
     font-size: 28px;
 }
 
+.player-id {
+    margin-bottom: 5px;
+}
+
 .logs {
     margin-top: 10px;
     font-size: 20px;
     list-style-type: none;
 }
 
-/* 
-ul {
-    list-style-type: none;
-} */
+footer {
+    margin: 20px 0;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#gh-link {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+#gh-logo {
+    width: 35px;
+    height: 35px;
+    margin: 0 10px;
+}
