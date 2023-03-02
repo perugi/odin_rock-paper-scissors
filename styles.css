@@ -88,8 +88,6 @@ body {
 footer {
     margin: 20px 0;
     font-size: 20px;
-    display: flex;
-    align-items: center;
 }
 
 #gh-link {
@@ -103,4 +101,9 @@ footer {
     width: 35px;
     height: 35px;
     margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#gh-link:hover #gh-logo {
+    transform: rotate(360deg) scale(1.2);
 }
